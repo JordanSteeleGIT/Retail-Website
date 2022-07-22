@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sen", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(1200px, 100%);
+  margin: auto;
+  padding: 1rem;
+}
+header {
+  width: 100%;
+  background-color: #eb5757;
+  height: 70px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  gap: calc(3rem - 10px);
+  list-style: none;
+  margin-right: 2rem;
+}
+.navbar ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 7px;
+  border-radius: 5px;
+  transition: 0.2s background-color;
+}
+
+.navbar ul a:hover {
+  background-color: #222;
+}
+.burger-container {
+  width: 55px;
+  height: 35px;
+  background-color: #222;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cart-icon {
+  color: white;
+  transform: scale(1.4);
+}
+
+.navbar .mobile-nav {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .navbar .fullscreen-nav {
+    display: none;
+  }
+  .navbar .mobile-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .mobile-nav .burger-icon {
+    cursor: pointer;
+  }
+  .navbar .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #eb5757;
+    text-align: center;
+    height: calc(100vh - 70px);
+    padding: 5rem 1rem 1rem 1rem;
+    margin: 0;
+  }
+  .navbar ul {
+    gap: 0.7rem;
+  }
+  .navbar ul a li {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s background-color;
+  }
+  .navbar ul li :hover {
+    border-radius: 5px;
+    background-color: #222;
+  }
+  .navbar .mobile-nav ul a {
+    font-size: 2em;
+  }
+}
