@@ -2,6 +2,7 @@ import React from "react";
 import FullscreenNav from "./FullscreenNav";
 import Logo from "../../Images/Logo.svg";
 import MobileNav from "./MobileNav";
+import "../../Styles/Navbar/NavBar.css";
 
 const Navbar = () => {
   return (
